@@ -1,0 +1,194 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Exercise 11</title>
+<style>
+  .column2-grid{
+    display: grid;
+    grid-template-columns: 200px 75px;
+    margin-bottom: 20px;
+    margin-top: 20px;
+  }
+  .column3-grid{
+    margin-bottom: 20px;
+  }
+  .heading{
+    font-family: tahoma;
+    font-size: 15px;
+  }
+
+
+
+  .img1, .img2, .img3{
+       box-shadow:0px 0px 10px rgba(0, 0, 0, 0.3);
+       
+     }
+
+     .image5, .robot-image, .lady{
+      width:100%;
+     }
+
+     .Grid1{
+       display: grid;
+       grid-template-columns: 60px 1fr;
+     }
+
+     .H-layout1{
+       background-color: none;
+     }
+
+     .mutual{
+       font-family: arial;
+       color: rgb(96, 96, 96);
+       font-size: 14px;
+       background-color:none;
+     }
+     
+     .profile-picture{
+      width: 40px;
+ height: 40px;
+ border-radius: 20px;
+ margin-left: 10px;
+ margin-bottom:10px ;
+     }
+
+     .Friend-button{
+border:none;
+background-color: rgb(21, 125, 194);
+padding: 10px 10px;
+border-radius: 4px;
+color: white;
+font-size: 15px;
+margin-bottom: 10px;
+width: 110px;
+display: block;
+margin-left: 10px;
+     }
+     .heading-O{
+       font-family: arial;
+      
+       margin: 0;
+       margin: 20px;
+       
+     }
+     .Pictures-Grid{
+       display: grid;
+       grid-template-columns: 200px 200px 200px;
+       column-gap:20px;
+
+     }
+
+
+  
+
+</style>
+</head>
+<body>
+  <h3 class="heading">11a. 2 columns with widths of 200px and 75px</h3>
+  <div class="column2-grid">
+    <div style="background-color: lightblue;">200px</div>
+    <div style="background-color:lightpink;">75px</div>
+  </div>
+
+<h3 class="heading">11b. 3 columns with widths of 50px|remaining space|75px</h3>
+  <div class="column3-grid" style="display: grid; grid-template-columns: 50px 1fr 75px;" >
+    <div style="background-color: lightblue;">col1</div>
+    <div style="background-color:lightpink;">col2</div>
+    <div style="background-color:lightblue;">col3</div>
+  </div>
+
+<h3 class="heading">11c. 4 equal columns that takes up entire page. Space btw columns=20px, space btw rows=10px</h3>
+  <div style="display:grid;
+  grid-template-columns:1fr 1fr 1fr 1fr; column-gap: 20px; row-gap: 10px;">
+
+    <div style="background-color:lightpink"> col1</div>
+    <div  style="background-color:lightpink">col2</div>
+    <div  style="background-color:lightpink">col3</div>
+    <div  style="background-color:lightpink">col4</div>
+    <div style="background-color:lightpink"> col1</div>
+    <div  style="background-color:lightpink">col2</div>
+    <div  style="background-color:lightpink">col3</div>
+    <div  style="background-color:lightpink">col4</div>
+
+  </div>
+
+  <h3 class="heading">Recreated 10e. using CSS Grid removing inline-block and put each into a display:grid</h3>
+
+<!-- Entire Grid container for the three containers-->
+  <div class="Pictures-Grid">
+
+    <!-- First container div img1-->
+  <div class="img1">
+
+    <img src="1610640588-3918.webp" class="image5">
+    <h3 class="heading-O">Oliver</h3>
+<!--Grid section used inside inline-block-->
+
+<div class="Grid1">
+    <div class="H-layout1">
+      <img src="IMG_20220220_104646_4.jpg" class="profile-picture">
+    </div>
+  
+    <div class="mutual">
+    <p class="heading-2">2 mutual friends</p>
+    </div>
+</div>
+<!--End of Grid section-->
+
+    <button class="Friend-button">Add Friend</button>
+  </div>
+  <!-- End of first container-->
+
+<!--Second container div img2-->
+  <div class="img2">
+    <img src="62348307683ded0019d240e2.webp" class="robot-image">
+    <h3 class="heading-O">Mimi</h3>
+
+<!--Grid section-->
+  <div class="Grid1">
+    <div class="H-layout1">
+      <img src="62348307683ded0019d240e2.webp" class="profile-picture">
+    </div>
+    <div class="mutual">
+      <p class="heading-2">3 mutual friends</p>
+    </div>
+  </div>
+  <!--End of Grid section-->
+
+    <button class="Friend-button">Add Friend</button>
+  </div>
+
+  <!--End of Second container-->
+
+<!--Third container-->
+  <div class="img3">
+    <img src="1610640588-3918.webp" class="lady">
+    <h3 class="heading-O">Rex</h3>
+
+<!--Grid section-->
+<div class="Grid1">
+
+    <div class="H-layout1">
+      <img src="IMG_20220220_104646_4.jpg" class="profile-picture">
+    </div>
+    <div class="mutual">
+      <p class="heading-2">4 mutual friends</p>
+    </div>
+  
+</div>
+<!--End of Grid section-->
+
+    <button class="Friend-button">Add Friend</button>
+  </div>
+
+  </div>
+  <!--End of Third container-->
+
+</div>
+
+<!--End of Entire grid-->
+</body>
+</html>
